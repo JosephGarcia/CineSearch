@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		587C3967ECBDE4ABB239D481 /* Pods_CineSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C820D608681B0E7B1FE9F082 /* Pods_CineSearch.framework */; };
 		8C0E25F81CD470F10053622C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0E25F71CD470F10053622C /* AppDelegate.swift */; };
 		8C0E25FA1CD470F10053622C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0E25F91CD470F10053622C /* ViewController.swift */; };
 		8C0E25FD1CD470F10053622C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C0E25FB1CD470F10053622C /* Main.storyboard */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13565B04F120CC080B4F17D5 /* Pods-CineSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CineSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-CineSearch/Pods-CineSearch.release.xcconfig"; sourceTree = "<group>"; };
+		49ED73893617B439BA3AC4A8 /* Pods-CineSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CineSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CineSearch/Pods-CineSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		8C0E25F41CD470F10053622C /* CineSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CineSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C0E25F71CD470F10053622C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C0E25F91CD470F10053622C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 		8C0E26131CD470F10053622C /* CineSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CineSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C0E26171CD470F10053622C /* CineSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CineSearchUITests.swift; sourceTree = "<group>"; };
 		8C0E26191CD470F10053622C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C820D608681B0E7B1FE9F082 /* Pods_CineSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CineSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				587C3967ECBDE4ABB239D481 /* Pods_CineSearch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08E7C66C970E31D4AEB3A317 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C820D608681B0E7B1FE9F082 /* Pods_CineSearch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		611241999007E6C5E525B0D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				49ED73893617B439BA3AC4A8 /* Pods-CineSearch.debug.xcconfig */,
+				13565B04F120CC080B4F17D5 /* Pods-CineSearch.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8C0E25EB1CD470F10053622C = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +103,8 @@
 				8C0E260B1CD470F10053622C /* CineSearchTests */,
 				8C0E26161CD470F10053622C /* CineSearchUITests */,
 				8C0E25F51CD470F10053622C /* Products */,
+				611241999007E6C5E525B0D3 /* Pods */,
+				08E7C66C970E31D4AEB3A317 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C0E261C1CD470F10053622C /* Build configuration list for PBXNativeTarget "CineSearch" */;
 			buildPhases = (
+				642D57BFCE1F026DFF272DC8 /* Check Pods Manifest.lock */,
 				8C0E25F01CD470F10053622C /* Sources */,
 				8C0E25F11CD470F10053622C /* Frameworks */,
 				8C0E25F21CD470F10053622C /* Resources */,
+				AF2A7CC80C07FA0EB20A3E83 /* Embed Pods Frameworks */,
+				43B00477A0AFE057E0E49B17 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,6 +280,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		43B00477A0AFE057E0E49B17 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CineSearch/Pods-CineSearch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		642D57BFCE1F026DFF272DC8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AF2A7CC80C07FA0EB20A3E83 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CineSearch/Pods-CineSearch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8C0E25F01CD470F10053622C /* Sources */ = {
@@ -398,6 +473,7 @@
 		};
 		8C0E261D1CD470F10053622C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49ED73893617B439BA3AC4A8 /* Pods-CineSearch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CineSearch/Info.plist;
@@ -409,6 +485,7 @@
 		};
 		8C0E261E1CD470F10053622C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13565B04F120CC080B4F17D5 /* Pods-CineSearch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CineSearch/Info.plist;
@@ -485,6 +562,7 @@
 				8C0E261E1CD470F10053622C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C0E261F1CD470F10053622C /* Build configuration list for PBXNativeTarget "CineSearchTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +571,7 @@
 				8C0E26211CD470F10053622C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C0E26221CD470F10053622C /* Build configuration list for PBXNativeTarget "CineSearchUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +580,7 @@
 				8C0E26241CD470F10053622C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

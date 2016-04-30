@@ -1,0 +1,6 @@
+framework module Pods_CineSearch {
+  umbrella header "Pods-CineSearch-umbrella.h"
+
+  export *
+  module * { export * }
+}
