@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		587C3967ECBDE4ABB239D481 /* Pods_CineSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C820D608681B0E7B1FE9F082 /* Pods_CineSearch.framework */; };
 		8C0E25F81CD470F10053622C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0E25F71CD470F10053622C /* AppDelegate.swift */; };
-		8C0E25FA1CD470F10053622C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0E25F91CD470F10053622C /* ViewController.swift */; };
+		8C0E25FA1CD470F10053622C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0E25F91CD470F10053622C /* HomeViewController.swift */; };
 		8C0E25FD1CD470F10053622C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C0E25FB1CD470F10053622C /* Main.storyboard */; };
 		8C0E25FF1CD470F10053622C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C0E25FE1CD470F10053622C /* Assets.xcassets */; };
 		8C0E26021CD470F10053622C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C0E26001CD470F10053622C /* LaunchScreen.storyboard */; };
@@ -20,6 +20,8 @@
 		8C0E262F1CD4721F0053622C /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C0E262B1CD4721F0053622C /* NotoSans-Italic.ttf */; };
 		8C0E26301CD4721F0053622C /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C0E262C1CD4721F0053622C /* NotoSans-Regular.ttf */; };
 		8C0E26331CD4724B0053622C /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0E26321CD4724B0053622C /* constants.swift */; };
+		8C0E26351CD55FF10053622C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0E26341CD55FF10053622C /* SearchViewController.swift */; };
+		8C0E26371CD564410053622C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0E26361CD564410053622C /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +46,7 @@
 		49ED73893617B439BA3AC4A8 /* Pods-CineSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CineSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CineSearch/Pods-CineSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		8C0E25F41CD470F10053622C /* CineSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CineSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C0E25F71CD470F10053622C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8C0E25F91CD470F10053622C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8C0E25F91CD470F10053622C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8C0E25FC1CD470F10053622C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8C0E25FE1CD470F10053622C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C0E26011CD470F10053622C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,6 +62,8 @@
 		8C0E262B1CD4721F0053622C /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Italic.ttf"; sourceTree = "<group>"; };
 		8C0E262C1CD4721F0053622C /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
 		8C0E26321CD4724B0053622C /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		8C0E26341CD55FF10053622C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		8C0E26361CD564410053622C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C820D608681B0E7B1FE9F082 /* Pods_CineSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CineSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -137,7 +141,6 @@
 				8C0E26261CD471FF0053622C /* Model */,
 				8C0E26251CD471F80053622C /* Controller */,
 				8C0E25F71CD470F10053622C /* AppDelegate.swift */,
-				8C0E25F91CD470F10053622C /* ViewController.swift */,
 				8C0E25FB1CD470F10053622C /* Main.storyboard */,
 				8C0E25FE1CD470F10053622C /* Assets.xcassets */,
 				8C0E26001CD470F10053622C /* LaunchScreen.storyboard */,
@@ -167,6 +170,9 @@
 		8C0E26251CD471F80053622C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8C0E25F91CD470F10053622C /* HomeViewController.swift */,
+				8C0E26341CD55FF10053622C /* SearchViewController.swift */,
+				8C0E26361CD564410053622C /* DetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -393,8 +399,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C0E25FA1CD470F10053622C /* ViewController.swift in Sources */,
+				8C0E25FA1CD470F10053622C /* HomeViewController.swift in Sources */,
 				8C0E25F81CD470F10053622C /* AppDelegate.swift in Sources */,
+				8C0E26371CD564410053622C /* DetailViewController.swift in Sources */,
+				8C0E26351CD55FF10053622C /* SearchViewController.swift in Sources */,
 				8C0E26331CD4724B0053622C /* constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
