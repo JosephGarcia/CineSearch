@@ -33,20 +33,20 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fjJ-tt-lJB">
-                                <rect key="frame" x="20" y="110" width="240" height="128"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fjJ-tt-lJB">
+                                <rect key="frame" x="20" y="110" width="560" height="470"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="djO-dY-eq1">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="172" height="143"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="qzx-pY-szz">
-                                        <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCell" id="qzx-pY-szz" customClass="MovieCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="172" height="143"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="172" height="143"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -58,7 +58,11 @@
                         <constraints>
                             <constraint firstItem="zXv-Vc-UUa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="12" id="0el-Z3-ajT"/>
                             <constraint firstItem="zXv-Vc-UUa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="8R3-ZE-ncv"/>
+                            <constraint firstAttribute="trailing" secondItem="fjJ-tt-lJB" secondAttribute="trailing" constant="20" id="Fpo-GH-vim"/>
                             <constraint firstItem="zXv-Vc-UUa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="NdT-Q9-9zF"/>
+                            <constraint firstItem="fjJ-tt-lJB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="TBm-9g-BWi"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fjJ-tt-lJB" secondAttribute="bottom" constant="20" id="gho-7p-DNR"/>
+                            <constraint firstItem="fjJ-tt-lJB" firstAttribute="top" secondItem="zXv-Vc-UUa" secondAttribute="bottom" constant="8" id="pUo-hx-UIc"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -74,6 +78,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="fjJ-tt-lJB" id="8QI-pm-FI3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
