@@ -46,13 +46,10 @@ class Movie {
     var runtime: Int {
         return _runtime
     }
-    
-    init(){
         
-    }
-    
-    init(title: String!, id: Int!){
+    init(title: String!, id: Int!, imageURL: String!){
         self._title = title
         self._movieID = id
+        self._imageURL = imageURL
     }
 }
