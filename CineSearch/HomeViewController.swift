@@ -8,25 +8,39 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    var movie = Movie()
+    var popularMovies = [Movie]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         collectionView.delegate = self
         collectionView.dataSource = self
+        displayMovies()
+    }
+    
+    // VIEWCONTROLLER FUNCTIONS
+    func displayMovies() {
+        let helper = APIHelper()
+        
+        helper.showPopularMovies { (movies) -> Void in
+            self.popularMovies = movies
+            self.collectionView.reloadData()
+        }
     }
     
     
+    
+    // COLLECTION VIEW CONTROLS
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
     }
     
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return popularMovies.count
     }
     
     
@@ -34,21 +48,27 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         
     }
     
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return CGSizeMake(150, 260)
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+        return 15.0
+    }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("MovieCell", forIndexPath: indexPath) as? MovieCell {
             
+            let movie: Movie
+            movie = popularMovies[indexPath.row]
+            cell.configureCell(movie)
             return cell
+            
         } else {
             return UICollectionViewCell()
         }
         
     }
-    
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSizeMake(150, 260)
-    }
-    
     
 }
 
