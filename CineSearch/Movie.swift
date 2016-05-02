@@ -17,6 +17,7 @@ class Movie {
     private var _imageURL: String!
     private var _releaseDate: String!
     private var _tagline: String!
+    private var _movieURL: String!
     private var _runtime: Int!
     
     var title: String {
@@ -46,10 +47,24 @@ class Movie {
     var runtime: Int {
         return _runtime
     }
+    
+    var movieURL: String{
+        return _movieURL
+    }
         
     init(title: String!, id: Int!, imageURL: String!){
         self._title = title
         self._movieID = id
         self._imageURL = imageURL
+        
+        _movieURL = "\(TMDB_BASE_URL)/\(self.movieID)\(TMDB_API_KEY)\(TMDB_APPEND_RESPONSE)" // GRABS MOVIE WITH ID TOGETHER WITH CREDITS AND IMAGES
+    }
+    
+    func getMovieDetails(completed: DownloadComplete){
+        let url = NSURL(string: _movieURL)!
+        Alamofire.request(.GET, url).responseJSON { (response) -> Void in
+            let result = response.result
+            
+        }
     }
 }

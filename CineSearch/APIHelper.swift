@@ -22,7 +22,7 @@ class APIHelper {
                 
                 if let movies = database["results"] as? [Dictionary<String, AnyObject>] {
                     for movie in movies {
-                        
+                        // CREATE MOVIE 
                         if let movieTitle = movie["title"] as? String {
                             title = movieTitle
                         }

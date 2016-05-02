@@ -9,27 +9,14 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    @IBOutlet weak var navBar: UINavigationItem!
+    @IBOutlet weak var moviePoster: UIImageView!
+    var movie: Movie!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let posterURL = NSURL(string:"\(TMDB_MOVIE_POSTER_BASE)\(self.movie.imageURL)")
+        moviePoster.kf_setImageWithURL(posterURL!)
+        navBar.title = movie.title
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

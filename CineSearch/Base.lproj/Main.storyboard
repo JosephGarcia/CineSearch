@@ -42,7 +42,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideLeft"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                                        <real key="value" value="0.29999999999999999"/>
+                                        <real key="value" value="0.5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="force">
                                         <real key="value" value="1.2"/>
@@ -108,12 +108,13 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="dvE-59-16C">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="kUr-KQ-HxV" kind="push" id="YM3-ME-WIJ"/>
+                                <segue destination="kUr-KQ-HxV" kind="show" id="YM3-ME-WIJ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="fjJ-tt-lJB" id="8QI-pm-FI3"/>
+                        <segue destination="yQm-eV-vMi" kind="show" identifier="homeToDetail" id="YCt-45-iSv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -157,7 +158,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="yQm-eV-vMi" kind="push" id="yU1-kF-aPs"/>
+                        <segue destination="yQm-eV-vMi" kind="show" identifier="searchToDetail" id="yU1-kF-aPs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aNd-n5-WD5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -176,21 +177,84 @@
                     <view key="view" contentMode="scaleToFill" id="RRN-7F-BTP">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6LQ-b3-hf9">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="hcx-0l-PMl"/>
+                                    <constraint firstAttribute="height" constant="230" id="vrw-He-Sq7"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="hcx-0l-PMl"/>
+                                        <exclude reference="vrw-He-Sq7"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bUq-at-emy">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="zkB-Y8-nXa">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eI4-bJ-KYR">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wpJ-NJ-KDn">
+                                                    <rect key="frame" x="8" y="8" width="584" height="140"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="140" id="mCt-VX-utU"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.45000000000000001" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="wpJ-NJ-KDn" secondAttribute="trailing" constant="8" id="Q2g-lM-84v"/>
+                                                <constraint firstItem="wpJ-NJ-KDn" firstAttribute="leading" secondItem="eI4-bJ-KYR" secondAttribute="leading" constant="8" id="q1t-Z8-XQd"/>
+                                                <constraint firstItem="wpJ-NJ-KDn" firstAttribute="top" secondItem="eI4-bJ-KYR" secondAttribute="top" constant="8" id="tju-zb-diC"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="eI4-bJ-KYR" secondAttribute="trailing" id="HPb-bP-DFC"/>
+                                        <constraint firstItem="eI4-bJ-KYR" firstAttribute="leading" secondItem="zkB-Y8-nXa" secondAttribute="leading" id="Pyd-W0-lqO"/>
+                                        <constraint firstItem="eI4-bJ-KYR" firstAttribute="top" secondItem="zkB-Y8-nXa" secondAttribute="top" id="STh-Cc-j00"/>
+                                        <constraint firstAttribute="bottom" secondItem="eI4-bJ-KYR" secondAttribute="bottom" id="XgT-79-3sh"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NKD-3Y-nfe" firstAttribute="top" secondItem="bUq-at-emy" secondAttribute="bottom" id="03C-bQ-L8v"/>
+                            <constraint firstItem="NKD-3Y-nfe" firstAttribute="top" secondItem="6LQ-b3-hf9" secondAttribute="bottom" id="Ahm-dO-dON"/>
+                            <constraint firstAttribute="trailing" secondItem="bUq-at-emy" secondAttribute="trailing" id="Bko-Jy-MB3"/>
+                            <constraint firstAttribute="trailing" secondItem="6LQ-b3-hf9" secondAttribute="trailing" id="Dty-70-sGE"/>
+                            <constraint firstItem="bUq-at-emy" firstAttribute="leading" secondItem="RRN-7F-BTP" secondAttribute="leading" id="F2v-Gu-nmj"/>
+                            <constraint firstItem="bUq-at-emy" firstAttribute="top" secondItem="BnI-lK-VSf" secondAttribute="bottom" id="UB4-Jo-7Fg"/>
+                            <constraint firstItem="6LQ-b3-hf9" firstAttribute="top" secondItem="BnI-lK-VSf" secondAttribute="bottom" id="kST-XT-qHJ"/>
+                            <constraint firstItem="6LQ-b3-hf9" firstAttribute="leading" secondItem="RRN-7F-BTP" secondAttribute="leading" id="zwa-sR-x2y"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Movie Details" id="S7y-WC-cHs">
-                        <barButtonItem key="leftBarButtonItem" title="Back to Search" id="3hA-Kh-mS3">
+                        <barButtonItem key="leftBarButtonItem" image="icon-back" id="3hA-Kh-mS3">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="dGV-d7-5Lr" kind="unwind" unwindAction="unwindToViewController:" id="sal-bk-arl"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="moviePoster" destination="6LQ-b3-hf9" id="1CD-8t-OCk"/>
+                        <outlet property="navBar" destination="S7y-WC-cHs" id="qRm-XO-WV8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cJm-Pu-AGe" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="dGV-d7-5Lr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1004" y="753"/>
+            <point key="canvasLocation" x="-57" y="1540"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CqD-C0-oLz">
@@ -216,6 +280,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icon-back" width="11" height="20"/>
         <image name="movie-poster" width="500" height="750"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="YCt-45-iSv"/>
+    </inferredMetricsTieBreakers>
 </document>

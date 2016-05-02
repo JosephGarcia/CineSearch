@@ -21,6 +21,16 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         displayMovies()
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == HOME_TO_DETAIL {
+            if let detailVC = segue.destinationViewController as? DetailViewController {
+                if let movie = sender as? Movie {
+                    detailVC.movie = movie
+                }
+            }
+        }
+    }
+    
     // VIEWCONTROLLER FUNCTIONS
     func displayMovies() {
         let helper = APIHelper()
@@ -30,8 +40,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             self.collectionView.reloadData()
         }
     }
-    
-    
     
     // COLLECTION VIEW CONTROLS
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -45,7 +53,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        
+        let movie: Movie
+        movie = popularMovies[indexPath.row]
+        performSegueWithIdentifier(HOME_TO_DETAIL, sender: movie)
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
