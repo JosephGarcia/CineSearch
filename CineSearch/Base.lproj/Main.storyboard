@@ -19,9 +19,6 @@
             <string>NotoSans</string>
             <string>NotoSans</string>
             <string>NotoSans</string>
-            <string>NotoSans</string>
-            <string>NotoSans</string>
-            <string>NotoSans</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -312,115 +309,6 @@
                                                         <constraint firstAttribute="height" constant="1" id="c0h-91-AWE"/>
                                                     </constraints>
                                                 </view>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2mG-o9-gZ0" userLabel="Actors">
-                                                    <rect key="frame" x="150" y="198" width="300" height="98"/>
-                                                    <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FLe-wc-r6f">
-                                                            <rect key="frame" x="0.0" y="0.0" width="60" height="98"/>
-                                                            <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ryanreynolds" translatesAutoresizingMaskIntoConstraints="NO" id="Au0-x8-gBG" customClass="DesignableImageView" customModule="Spring">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="60" id="CfA-3X-P9F"/>
-                                                                        <constraint firstAttribute="width" constant="60" id="YjI-ZX-ZcU"/>
-                                                                    </constraints>
-                                                                    <userDefinedRuntimeAttributes>
-                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                            <real key="value" value="25"/>
-                                                                        </userDefinedRuntimeAttribute>
-                                                                    </userDefinedRuntimeAttributes>
-                                                                </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ryan Reynolds" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQ3-gg-tav">
-                                                                    <rect key="frame" x="0.0" y="65" width="60" height="33"/>
-                                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="11"/>
-                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="98" id="rKu-DU-sJt"/>
-                                                            </constraints>
-                                                        </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RRA-nz-56J">
-                                                            <rect key="frame" x="80" y="0.0" width="60" height="98"/>
-                                                            <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ryanreynolds" translatesAutoresizingMaskIntoConstraints="NO" id="5KN-bw-Cnp" customClass="DesignableImageView" customModule="Spring">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="60" id="a8z-16-fCw"/>
-                                                                        <constraint firstAttribute="height" constant="60" id="stl-Qo-nXg"/>
-                                                                    </constraints>
-                                                                    <userDefinedRuntimeAttributes>
-                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                            <real key="value" value="25"/>
-                                                                        </userDefinedRuntimeAttribute>
-                                                                    </userDefinedRuntimeAttributes>
-                                                                </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ryan Reynolds" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ek6-4x-VDd">
-                                                                    <rect key="frame" x="0.0" y="65" width="60" height="33"/>
-                                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="11"/>
-                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="98" id="ycG-tD-l5K"/>
-                                                            </constraints>
-                                                        </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qOv-d9-eH1">
-                                                            <rect key="frame" x="160" y="0.0" width="60" height="98"/>
-                                                            <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ryanreynolds" translatesAutoresizingMaskIntoConstraints="NO" id="dAQ-Yh-5bl" customClass="DesignableImageView" customModule="Spring">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="60" id="1yI-9v-vaf"/>
-                                                                        <constraint firstAttribute="height" constant="60" id="r2H-MR-6Xf"/>
-                                                                    </constraints>
-                                                                    <userDefinedRuntimeAttributes>
-                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                            <real key="value" value="25"/>
-                                                                        </userDefinedRuntimeAttribute>
-                                                                    </userDefinedRuntimeAttributes>
-                                                                </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ryan Reynolds" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7SK-de-64l">
-                                                                    <rect key="frame" x="0.0" y="65" width="60" height="33"/>
-                                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="11"/>
-                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="98" id="8ID-rS-ZLH"/>
-                                                            </constraints>
-                                                        </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TFs-yj-saa">
-                                                            <rect key="frame" x="240" y="0.0" width="60" height="98"/>
-                                                            <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ryanreynolds" translatesAutoresizingMaskIntoConstraints="NO" id="TPK-4h-yaG" customClass="DesignableImageView" customModule="Spring">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="60" id="TiH-5g-nq8"/>
-                                                                        <constraint firstAttribute="height" constant="60" id="YQb-a8-wun"/>
-                                                                    </constraints>
-                                                                    <userDefinedRuntimeAttributes>
-                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                            <real key="value" value="25"/>
-                                                                        </userDefinedRuntimeAttribute>
-                                                                    </userDefinedRuntimeAttributes>
-                                                                </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ryan Reynolds" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5u-fL-gMV">
-                                                                    <rect key="frame" x="0.0" y="65" width="60" height="33"/>
-                                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="11"/>
-                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="98" id="Kf5-R1-DR2"/>
-                                                            </constraints>
-                                                        </stackView>
-                                                    </subviews>
-                                                </stackView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JBI-bK-Byc" customClass="CosmosView" customModule="Cosmos">
                                                     <rect key="frame" x="420" y="8" width="172" height="30"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -446,23 +334,78 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="un8-1p-iOf">
+                                                    <rect key="frame" x="8" y="195" width="584" height="125"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="461" id="0wo-JK-mpv"/>
+                                                        <constraint firstAttribute="height" constant="125" id="H5m-yY-oQl"/>
+                                                    </constraints>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qKx-Fz-Zsp">
+                                                        <size key="itemSize" width="75" height="119"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ActorCell" id="dUO-Ka-b0M" customClass="ActorCell" customModule="CineSearch" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="3" width="75" height="119"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                <rect key="frame" x="0.0" y="0.0" width="75" height="119"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gX0-Mb-3PP" customClass="DesignableImageView" customModule="Spring">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="80"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="40"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                <real key="value" value="0.0"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chris Hemsworth" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AR8-Qg-hHH">
+                                                                        <rect key="frame" x="0.0" y="79" width="75" height="40"/>
+                                                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="12"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            </view>
+                                                            <connections>
+                                                                <outlet property="actorName" destination="AR8-Qg-hHH" id="Yhz-0T-Obs"/>
+                                                                <outlet property="actorThumbnail" destination="gX0-Mb-3PP" id="GMy-NN-uH9"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="0wo-JK-mpv"/>
+                                                        </mask>
+                                                    </variation>
+                                                </collectionView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.45000000000000001" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="BEZ-NX-dwE" firstAttribute="top" secondItem="OKH-z8-j6y" secondAttribute="bottom" constant="5" id="5MO-2O-1fh"/>
+                                                <constraint firstItem="un8-1p-iOf" firstAttribute="centerX" secondItem="bbT-Ml-kWb" secondAttribute="centerX" id="5zl-cO-qVo"/>
                                                 <constraint firstItem="OKH-z8-j6y" firstAttribute="leading" secondItem="eI4-bJ-KYR" secondAttribute="leading" constant="8" id="99g-NO-huv"/>
+                                                <constraint firstItem="un8-1p-iOf" firstAttribute="trailing" secondItem="eI4-bJ-KYR" secondAttribute="trailingMargin" id="9ag-ZV-e42"/>
+                                                <constraint firstItem="un8-1p-iOf" firstAttribute="leading" secondItem="eI4-bJ-KYR" secondAttribute="leadingMargin" id="AYc-u4-xfz"/>
                                                 <constraint firstItem="bbT-Ml-kWb" firstAttribute="top" secondItem="Joc-Gm-IPx" secondAttribute="bottom" constant="5" id="COP-Mq-eNU"/>
                                                 <constraint firstAttribute="trailing" secondItem="yBN-gy-eBo" secondAttribute="trailing" constant="8" id="EAe-cS-58Q"/>
                                                 <constraint firstItem="Joc-Gm-IPx" firstAttribute="top" secondItem="yBN-gy-eBo" secondAttribute="bottom" constant="10" id="Isn-5K-6qJ"/>
                                                 <constraint firstAttribute="trailing" secondItem="BEZ-NX-dwE" secondAttribute="trailing" constant="8" id="Jto-Gk-h1b"/>
                                                 <constraint firstItem="BEZ-NX-dwE" firstAttribute="leading" secondItem="eI4-bJ-KYR" secondAttribute="leading" constant="8" id="K8b-YI-iFf"/>
+                                                <constraint firstItem="un8-1p-iOf" firstAttribute="top" secondItem="bbT-Ml-kWb" secondAttribute="bottom" constant="5" id="RW0-BD-Osi"/>
                                                 <constraint firstItem="bbT-Ml-kWb" firstAttribute="leading" secondItem="eI4-bJ-KYR" secondAttribute="leading" constant="8" id="W4C-Vb-qqf"/>
                                                 <constraint firstAttribute="trailing" secondItem="JBI-bK-Byc" secondAttribute="trailing" constant="8" id="Xvf-5f-P9K"/>
                                                 <constraint firstItem="bbT-Ml-kWb" firstAttribute="top" secondItem="Joc-Gm-IPx" secondAttribute="bottom" constant="5" id="Z8I-sl-RxH"/>
                                                 <constraint firstItem="yBN-gy-eBo" firstAttribute="leading" secondItem="eI4-bJ-KYR" secondAttribute="leading" constant="8" id="ZUV-RS-5Sx"/>
-                                                <constraint firstItem="2mG-o9-gZ0" firstAttribute="centerX" secondItem="bbT-Ml-kWb" secondAttribute="centerX" id="eBa-gE-ae0"/>
                                                 <constraint firstItem="yBN-gy-eBo" firstAttribute="top" secondItem="BEZ-NX-dwE" secondAttribute="bottom" constant="5" id="hCM-Na-AEg"/>
-                                                <constraint firstItem="2mG-o9-gZ0" firstAttribute="top" secondItem="bbT-Ml-kWb" secondAttribute="bottom" constant="8" id="ifL-cZ-90Y"/>
                                                 <constraint firstAttribute="trailing" secondItem="bbT-Ml-kWb" secondAttribute="trailing" constant="8" id="kQV-K5-JtG"/>
                                                 <constraint firstItem="OKH-z8-j6y" firstAttribute="top" secondItem="eI4-bJ-KYR" secondAttribute="top" constant="8" id="m6D-t9-7xk"/>
                                                 <constraint firstItem="bbT-Ml-kWb" firstAttribute="top" secondItem="Joc-Gm-IPx" secondAttribute="bottom" id="yp5-bV-eUH"/>
@@ -509,14 +452,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="actorFour" destination="f5u-fL-gMV" id="Uxs-6P-2cC"/>
-                        <outlet property="actorFourThumbnail" destination="TPK-4h-yaG" id="bMA-Jj-sY2"/>
-                        <outlet property="actorOne" destination="MQ3-gg-tav" id="dc3-4R-lll"/>
-                        <outlet property="actorOneThumbnail" destination="Au0-x8-gBG" id="1uj-cf-pVB"/>
-                        <outlet property="actorThree" destination="7SK-de-64l" id="Njq-w6-OSN"/>
-                        <outlet property="actorThreeThumbnail" destination="dAQ-Yh-5bl" id="ykl-ey-8iz"/>
-                        <outlet property="actorTwo" destination="ek6-4x-VDd" id="BRm-sZ-sS6"/>
-                        <outlet property="actorTwoThumbnail" destination="5KN-bw-Cnp" id="Ojg-MT-xu7"/>
+                        <outlet property="collectionView" destination="un8-1p-iOf" id="I3b-hx-oCb"/>
                         <outlet property="moviePoster" destination="6LQ-b3-hf9" id="1CD-8t-OCk"/>
                         <outlet property="movieStars" destination="JBI-bK-Byc" id="ymm-o4-8LI"/>
                         <outlet property="movieSynopsis" destination="yBN-gy-eBo" id="v3E-Um-NSV"/>
@@ -555,7 +491,6 @@
     <resources>
         <image name="icon-back" width="11" height="20"/>
         <image name="movie-poster" width="500" height="750"/>
-        <image name="ryanreynolds" width="640" height="420"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="yU1-kF-aPs"/>

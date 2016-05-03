@@ -10,23 +10,16 @@ import UIKit
 import Spring
 import Cosmos
 
-class DetailViewController: UIViewController, UITextViewDelegate {
+class DetailViewController: UIViewController, UITextViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var navBar: UINavigationItem!
     @IBOutlet weak var visualEffectView: UIVisualEffectView!
     @IBOutlet weak var moviePoster: UIImageView!
     @IBOutlet weak var movieSynopsis: UITextView!
-    @IBOutlet weak var actorOne: UILabel!
-    @IBOutlet weak var actorTwo: UILabel!
-    @IBOutlet weak var actorThree: UILabel!
-    @IBOutlet weak var actorFour: UILabel!
-    @IBOutlet weak var actorOneThumbnail: DesignableImageView!
-    @IBOutlet weak var actorTwoThumbnail: DesignableImageView!
-    @IBOutlet weak var actorThreeThumbnail: DesignableImageView!
-    @IBOutlet weak var actorFourThumbnail: DesignableImageView!
     @IBOutlet weak var movieStars: CosmosView!
     
-    
     var movie: Movie!
+    var actors = [Actor]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,27 +28,17 @@ class DetailViewController: UIViewController, UITextViewDelegate {
         
         movie.getMovieDetails { () -> () in
             self.updateUI()
+            self.actors = self.movie.actors
+            self.collectionView.reloadData()
         }
-        
+        collectionView.dataSource = self
+        collectionView.delegate = self
         movieSynopsis.delegate = self
     }
     
     func updateUI(){
         movieSynopsis.setContentOffset(CGPointZero, animated: false) //SETS TEXTVIEW TO TOP
         movieSynopsis.text = movie.overview
-        
-        //SETUP ACTOR NAMES
-        actorOne.text = movie.actors[0]
-        actorTwo.text = movie.actors[1]
-        actorThree.text = movie.actors[2]
-        actorFour.text = movie.actors[3]
-        
-        //SETUP ACTOR IMAGES
-        actorOneThumbnail.kf_setImageWithURL(NSURL(string: movie.actorThumbnail[0])!)
-        actorTwoThumbnail.kf_setImageWithURL(NSURL(string: movie.actorThumbnail[1])!)
-        actorThreeThumbnail.kf_setImageWithURL(NSURL(string: movie.actorThumbnail[2])!)
-        actorFourThumbnail.kf_setImageWithURL(NSURL(string: movie.actorThumbnail[3])!)
-        
         movieStars.rating = movie.voteAverage
     }
     
@@ -64,4 +47,31 @@ class DetailViewController: UIViewController, UITextViewDelegate {
         moviePoster.kf_setImageWithURL(posterURL!)
         navBar.title = movie.title
     }
+    
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return actors.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+        return 20.0
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return CGSizeMake(75, 120)
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ActorCell", forIndexPath: indexPath) as? ActorCell {
+            let actor = actors[indexPath.row]
+            cell.configureCell(actor)
+            return cell
+        } else {
+            return UICollectionViewCell()
+        }
+    }
+
 }
