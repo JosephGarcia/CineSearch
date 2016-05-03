@@ -15,12 +15,11 @@ class Movie {
     private var _movieID: Int!
     private var _overview: String!
     private var _imageURL: String!
+    private var _actors: [Actor]!
     private var _releaseDate: String!
     private var _tagline: String!
     private var _movieURL: String!
     private var _runtime: Int!
-    private var _actors: [String]!
-    private var _actorThumbnail: [String]!
     private var _voteAverage: Double!
     
     var title: String {
@@ -31,23 +30,35 @@ class Movie {
         return _movieID
     }
     
-    var overview: String {
-        return _overview
-    }
-    
     var imageURL: String {
         return _imageURL
     }
     
+    var overview: String {
+        if _overview == nil {
+            _overview = "N/A"
+        }
+        return _overview
+    }
+    
     var releaseDate: String {
+        if _releaseDate == nil {
+            _releaseDate = "N/A"
+        }
         return _releaseDate
     }
     
     var tagline: String {
+        if _tagline == nil {
+            _tagline = "N/A"
+        }
         return _tagline
     }
     
     var runtime: Int {
+        if _runtime == nil {
+            _runtime = 0
+        }
         return _runtime
     }
     
@@ -55,16 +66,12 @@ class Movie {
         return _movieURL
     }
     
-    var actors: [String] {
-        return _actors
-    }
-    
-    var actorThumbnail: [String] {
-        return _actorThumbnail
-    }
-    
     var voteAverage: Double {
         return _voteAverage
+    }
+    
+    var actors: [Actor] {
+        return _actors
     }
     
         
@@ -80,8 +87,9 @@ class Movie {
         let url = NSURL(string: _movieURL)!
         Alamofire.request(.GET, url).responseJSON { (response) -> Void in
             let result = response.result
-            var mainActors = [String]()
-            var actorImages = [String]()
+            var actorName = String()
+            var actorThumbnail = String()
+            var actorsInMovie = [Actor]()
             if let movie = result.value as? Dictionary<String,AnyObject> {
                 
                 if let overview = movie["overview"] as? String {
@@ -94,22 +102,21 @@ class Movie {
                 
                 if let credits = movie["credits"] as? Dictionary<String,AnyObject> {
                     
-                    if let cast = credits["cast"] as? [Dictionary<String,AnyObject>] {
-                        let actors = cast.prefix(4) // GRABBING ONLY THE MAIN CHARACTERS
+                    if let actors = credits["cast"] as? [Dictionary<String,AnyObject>] {
                         
                         for actor in actors {
                             
                             if let name = actor["name"] as? String {
-                                mainActors.append(name)
+                                actorName = name
                             }
-                            
                             if let profile_path = actor["profile_path"] as? String {
                                 let thumbnailPath = "\(TMDB_IMAGE_BASE)\(profile_path)"
-                                actorImages.append(thumbnailPath)
+                                actorThumbnail = thumbnailPath
                             }
+                            let actorData = Actor(name: actorName, thumbnail: actorThumbnail)
+                            actorsInMovie.append(actorData)
                         }
-                        self._actors = mainActors
-                        self._actorThumbnail = actorImages
+                        self._actors = actorsInMovie
                     }
                 }
             }
