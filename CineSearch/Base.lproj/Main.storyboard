@@ -75,8 +75,25 @@
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="260"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="movie-poster" translatesAutoresizingMaskIntoConstraints="NO" id="x6d-EE-z9d">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="movie-poster" translatesAutoresizingMaskIntoConstraints="NO" id="x6d-EE-z9d" customClass="DesignableImageView" customModule="Spring">
                                                     <rect key="frame" x="0.0" y="0.0" width="150" height="212"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" red="0.0" green="0.0" blue="0.078947368419999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="NO"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                                            <real key="value" value="0.5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                            <real key="value" value="0.0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="NO"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Captain America: Civil War" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZcV-89-LYZ">
                                                     <rect key="frame" x="0.0" y="212" width="150" height="48"/>
@@ -89,7 +106,7 @@
                                         </view>
                                         <color key="backgroundColor" red="0.86666666670000003" green="0.29411764709999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <outlet property="moviePoster" destination="x6d-EE-z9d" id="Pdq-2S-nye"/>
+                                            <outlet property="moviePoster" destination="x6d-EE-z9d" id="MwX-e2-b0T"/>
                                             <outlet property="movieTitle" destination="ZcV-89-LYZ" id="J49-mj-lbs"/>
                                         </connections>
                                     </collectionViewCell>
@@ -176,8 +193,25 @@
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="260"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uhp-cK-Cfi">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="moviePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="uhp-cK-Cfi" customClass="DesignableImageView" customModule="Spring">
                                                     <rect key="frame" x="0.0" y="0.0" width="150" height="212"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" red="0.0" green="0.0" blue="0.078947368421052627" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="NO"/>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="NO"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                                            <real key="value" value="0.5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                            <real key="value" value="0.0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Captain America: Civil War" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dH3-Nx-tpZ">
                                                     <rect key="frame" x="0.0" y="212" width="150" height="48"/>
@@ -190,7 +224,7 @@
                                         </view>
                                         <color key="backgroundColor" red="0.86666666670000003" green="0.29411764709999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <outlet property="moviePoster" destination="uhp-cK-Cfi" id="evL-Eg-Hwu"/>
+                                            <outlet property="moviePoster" destination="uhp-cK-Cfi" id="fsP-Ja-ODa"/>
                                             <outlet property="movieTitle" destination="dH3-Nx-tpZ" id="HbM-Rn-bY4"/>
                                         </connections>
                                     </collectionViewCell>
@@ -491,6 +525,7 @@
     <resources>
         <image name="icon-back" width="11" height="20"/>
         <image name="movie-poster" width="500" height="750"/>
+        <image name="moviePlaceholder" width="300" height="437"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="yU1-kF-aPs"/>

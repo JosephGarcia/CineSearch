@@ -12,7 +12,8 @@ import Kingfisher
 
 class MovieCell: UICollectionViewCell{
     
-    @IBOutlet weak var moviePoster: UIImageView!
+
+    @IBOutlet weak var moviePoster: DesignableImageView!
     @IBOutlet weak var movieTitle: UILabel!
     
     var movie: Movie!
@@ -34,6 +35,10 @@ class MovieCell: UICollectionViewCell{
         let imageURL = NSURL(string:"\(TMDB_IMAGE_BASE)\(self.movie.imageURL)")
         moviePoster.kf_setImageWithURL(imageURL!, placeholderImage: placeholder)
         movieTitle.text = self.movie.title
+    }
+    
+    func cellAnimate(){
+        moviePoster.animate()
     }
 
 }

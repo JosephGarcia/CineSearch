@@ -53,6 +53,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let currentCell = collectionView.cellForItemAtIndexPath(indexPath) as! MovieCell
+        currentCell.cellAnimate()
         let movie: Movie
         movie = popularMovies[indexPath.row]
         performSegueWithIdentifier(HOME_TO_DETAIL, sender: movie)

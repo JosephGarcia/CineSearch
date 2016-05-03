@@ -24,10 +24,6 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
         searchBar.delegate = self
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        self.view.endEditing(true)
-    }
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == SEARCH_TO_DETAIL {
             if let detailVC = segue.destinationViewController as? DetailViewController {
@@ -36,6 +32,10 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
                 }
             }
         }
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        searchBar.resignFirstResponder()
     }
     
     //VC FUNCTIONS
@@ -52,7 +52,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
         
         searchBar.resignFirstResponder()
     }
-    
+
     // COLLECTION VIEW CONTROLS
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -65,6 +65,8 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
     
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let currentCell = collectionView.cellForItemAtIndexPath(indexPath) as! MovieCell
+        currentCell.cellAnimate()
         let movie: Movie
         movie = searchResults[indexPath.row]
         performSegueWithIdentifier(SEARCH_TO_DETAIL, sender: movie)
