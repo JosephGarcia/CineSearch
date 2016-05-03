@@ -19,6 +19,8 @@ class Movie {
     private var _tagline: String!
     private var _movieURL: String!
     private var _runtime: Int!
+    private var _actors: [String]!
+    private var _actorThumbnail: [String]!
     
     var title: String {
         return _title
@@ -48,9 +50,18 @@ class Movie {
         return _runtime
     }
     
-    var movieURL: String{
+    var movieURL: String {
         return _movieURL
     }
+    
+    var actors: [String] {
+        return _actors
+    }
+    
+    var actorThumbnail: [String] {
+        return _actorThumbnail
+    }
+    
         
     init(title: String!, id: Int!, imageURL: String!){
         self._title = title
@@ -64,9 +75,33 @@ class Movie {
         let url = NSURL(string: _movieURL)!
         Alamofire.request(.GET, url).responseJSON { (response) -> Void in
             let result = response.result
+            var mainActors = [String]()
+            var actorImages = [String]()
             if let movie = result.value as? Dictionary<String,AnyObject> {
+                
                 if let overview = movie["overview"] as? String {
                     self._overview = overview
+                }
+                
+                if let credits = movie["credits"] as? Dictionary<String,AnyObject> {
+                    
+                    if let cast = credits["cast"] as? [Dictionary<String,AnyObject>] {
+                        let actors = cast.prefix(4) // GRABBING ONLY THE MAIN CHARACTERS
+                        
+                        for actor in actors {
+                            
+                            if let name = actor["name"] as? String {
+                                mainActors.append(name)
+                            }
+                            
+                            if let profile_path = actor["profile_path"] as? String {
+                                let thumbnailPath = "\(TMDB_IMAGE_BASE)\(profile_path)"
+                                actorImages.append(thumbnailPath)
+                            }
+                        }
+                        self._actors = mainActors
+                        self._actorThumbnail = actorImages
+                    }
                 }
             }
             completed()

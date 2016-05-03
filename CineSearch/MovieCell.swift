@@ -29,7 +29,7 @@ class MovieCell: UICollectionViewCell{
     
     func configureCell(movie: Movie){
         self.movie = movie
-        let imageURL = NSURL(string:"\(TMDB_MOVIE_POSTER_BASE)\(self.movie.imageURL)")
+        let imageURL = NSURL(string:"\(TMDB_IMAGE_BASE)\(self.movie.imageURL)")
         moviePoster.kf_setImageWithURL(imageURL!)
         movieTitle.text = self.movie.title
     }

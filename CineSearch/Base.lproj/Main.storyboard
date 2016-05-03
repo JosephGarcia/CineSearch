@@ -254,13 +254,13 @@
                                                         <constraint firstAttribute="height" constant="1" id="c0h-91-AWE"/>
                                                     </constraints>
                                                 </view>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="2mG-o9-gZ0" userLabel="Actors">
-                                                    <rect key="frame" x="158" y="198" width="285" height="98"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2mG-o9-gZ0" userLabel="Actors">
+                                                    <rect key="frame" x="150" y="198" width="300" height="98"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FLe-wc-r6f">
                                                             <rect key="frame" x="0.0" y="0.0" width="60" height="98"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ryanreynolds" translatesAutoresizingMaskIntoConstraints="NO" id="Au0-x8-gBG" customClass="DesignableImageView" customModule="Spring">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ryanreynolds" translatesAutoresizingMaskIntoConstraints="NO" id="Au0-x8-gBG" customClass="DesignableImageView" customModule="Spring">
                                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="60" id="CfA-3X-P9F"/>
@@ -272,9 +272,9 @@
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ryan Reynolds" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQ3-gg-tav">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ryan Reynolds" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQ3-gg-tav">
                                                                     <rect key="frame" x="0.0" y="65" width="60" height="33"/>
-                                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="12"/>
+                                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="11"/>
                                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -284,7 +284,7 @@
                                                             </constraints>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RRA-nz-56J">
-                                                            <rect key="frame" x="75" y="0.0" width="60" height="98"/>
+                                                            <rect key="frame" x="80" y="0.0" width="60" height="98"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ryanreynolds" translatesAutoresizingMaskIntoConstraints="NO" id="5KN-bw-Cnp" customClass="DesignableImageView" customModule="Spring">
                                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -300,7 +300,7 @@
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ryan Reynolds" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ek6-4x-VDd">
                                                                     <rect key="frame" x="0.0" y="65" width="60" height="33"/>
-                                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="12"/>
+                                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="11"/>
                                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -310,7 +310,7 @@
                                                             </constraints>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qOv-d9-eH1">
-                                                            <rect key="frame" x="150" y="0.0" width="60" height="98"/>
+                                                            <rect key="frame" x="160" y="0.0" width="60" height="98"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ryanreynolds" translatesAutoresizingMaskIntoConstraints="NO" id="dAQ-Yh-5bl" customClass="DesignableImageView" customModule="Spring">
                                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -326,7 +326,7 @@
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ryan Reynolds" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7SK-de-64l">
                                                                     <rect key="frame" x="0.0" y="65" width="60" height="33"/>
-                                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="12"/>
+                                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="11"/>
                                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -336,7 +336,7 @@
                                                             </constraints>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TFs-yj-saa">
-                                                            <rect key="frame" x="225" y="0.0" width="60" height="98"/>
+                                                            <rect key="frame" x="240" y="0.0" width="60" height="98"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ryanreynolds" translatesAutoresizingMaskIntoConstraints="NO" id="TPK-4h-yaG" customClass="DesignableImageView" customModule="Spring">
                                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -352,7 +352,7 @@
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ryan Reynolds" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5u-fL-gMV">
                                                                     <rect key="frame" x="0.0" y="65" width="60" height="33"/>
-                                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="12"/>
+                                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="11"/>
                                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -424,6 +424,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="actorFour" destination="f5u-fL-gMV" id="Uxs-6P-2cC"/>
+                        <outlet property="actorFourThumbnail" destination="TPK-4h-yaG" id="bMA-Jj-sY2"/>
+                        <outlet property="actorOne" destination="MQ3-gg-tav" id="dc3-4R-lll"/>
+                        <outlet property="actorOneThumbnail" destination="Au0-x8-gBG" id="1uj-cf-pVB"/>
+                        <outlet property="actorThree" destination="7SK-de-64l" id="Njq-w6-OSN"/>
+                        <outlet property="actorThreeThumbnail" destination="dAQ-Yh-5bl" id="ykl-ey-8iz"/>
+                        <outlet property="actorTwo" destination="ek6-4x-VDd" id="BRm-sZ-sS6"/>
+                        <outlet property="actorTwoThumbnail" destination="5KN-bw-Cnp" id="Ojg-MT-xu7"/>
                         <outlet property="moviePoster" destination="6LQ-b3-hf9" id="1CD-8t-OCk"/>
                         <outlet property="movieSynopsis" destination="yBN-gy-eBo" id="v3E-Um-NSV"/>
                         <outlet property="navBar" destination="S7y-WC-cHs" id="qRm-XO-WV8"/>
