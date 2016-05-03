@@ -109,10 +109,14 @@ class Movie {
                             if let name = actor["name"] as? String {
                                 actorName = name
                             }
+                            
                             if let profile_path = actor["profile_path"] as? String {
                                 let thumbnailPath = "\(TMDB_IMAGE_BASE)\(profile_path)"
                                 actorThumbnail = thumbnailPath
+                            } else {
+                                actorThumbnail = ""
                             }
+                            
                             let actorData = Actor(name: actorName, thumbnail: actorThumbnail)
                             actorsInMovie.append(actorData)
                         }

@@ -65,6 +65,8 @@ class APIHelper {
                         
                         if let posterURL = movie["poster_path"] as? String {
                             imageURL = posterURL
+                        } else {
+                            imageURL = ""
                         }
                         
                         if let movieID = movie["id"] as? Int {
