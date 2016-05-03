@@ -13,7 +13,7 @@ import Alamofire
 class Movie {
     private var _title: String!
     private var _movieID: Int!
-    private var _description: String!
+    private var _overview: String!
     private var _imageURL: String!
     private var _releaseDate: String!
     private var _tagline: String!
@@ -28,8 +28,8 @@ class Movie {
         return _movieID
     }
     
-    var description: String {
-        return _description
+    var overview: String {
+        return _overview
     }
     
     var imageURL: String {
@@ -64,7 +64,12 @@ class Movie {
         let url = NSURL(string: _movieURL)!
         Alamofire.request(.GET, url).responseJSON { (response) -> Void in
             let result = response.result
-            
+            if let movie = result.value as? Dictionary<String,AnyObject> {
+                if let overview = movie["overview"] as? String {
+                    self._overview = overview
+                }
+            }
+            completed()
         }
     }
 }

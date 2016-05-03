@@ -9,7 +9,16 @@
         <mutableArray key="NotoSans-Bold.ttf">
             <string>NotoSans-Bold</string>
         </mutableArray>
+        <mutableArray key="NotoSans-Italic.ttf">
+            <string>NotoSans-Italic</string>
+        </mutableArray>
         <mutableArray key="NotoSans-Regular.ttf">
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
             <string>NotoSans</string>
         </mutableArray>
     </customFonts>
@@ -200,19 +209,187 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eI4-bJ-KYR">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wpJ-NJ-KDn">
-                                                    <rect key="frame" x="8" y="8" width="584" height="140"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BEZ-NX-dwE">
+                                                    <rect key="frame" x="8" y="43" width="584" height="1"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="140" id="mCt-VX-utU"/>
+                                                        <constraint firstAttribute="height" constant="1" id="MIT-Yz-54l"/>
                                                     </constraints>
-                                                </imageView>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Synopsis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKH-z8-j6y">
+                                                    <rect key="frame" x="8" y="8" width="91" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="DxT-3t-Uah"/>
+                                                        <constraint firstAttribute="width" constant="91" id="xFv-qh-MlN"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="22"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yBN-gy-eBo">
+                                                    <rect key="frame" x="8" y="49" width="584" height="95"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="95" id="pLi-pl-h9v"/>
+                                                    </constraints>
+                                                    <string key="text">Based upon Marvel Comics’ most unconventional anti-hero, DEADPOOL tells the origin story of former Special Forces operative turned mercenary Wade Wilson, who after being subjected to a rogue experiment that leaves him with accelerated healing powers, adopts the alter ego Deadpool. Armed with his new abilities and a dark, twisted sense of humor, Deadpool hunts down the man who nearly destroyed his life.</string>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name="NotoSans-Italic" family="Noto Sans" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Joc-Gm-IPx">
+                                                    <rect key="frame" x="8" y="154" width="91" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="Khm-b6-z8X"/>
+                                                        <constraint firstAttribute="width" constant="91" id="W0r-5K-acw"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="22"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bbT-Ml-kWb">
+                                                    <rect key="frame" x="8" y="189" width="584" height="1"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="c0h-91-AWE"/>
+                                                    </constraints>
+                                                </view>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="2mG-o9-gZ0" userLabel="Actors">
+                                                    <rect key="frame" x="158" y="198" width="285" height="98"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FLe-wc-r6f">
+                                                            <rect key="frame" x="0.0" y="0.0" width="60" height="98"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ryanreynolds" translatesAutoresizingMaskIntoConstraints="NO" id="Au0-x8-gBG" customClass="DesignableImageView" customModule="Spring">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="60" id="CfA-3X-P9F"/>
+                                                                        <constraint firstAttribute="width" constant="60" id="YjI-ZX-ZcU"/>
+                                                                    </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <real key="value" value="25"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ryan Reynolds" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQ3-gg-tav">
+                                                                    <rect key="frame" x="0.0" y="65" width="60" height="33"/>
+                                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="12"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="98" id="rKu-DU-sJt"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RRA-nz-56J">
+                                                            <rect key="frame" x="75" y="0.0" width="60" height="98"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ryanreynolds" translatesAutoresizingMaskIntoConstraints="NO" id="5KN-bw-Cnp" customClass="DesignableImageView" customModule="Spring">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="60" id="a8z-16-fCw"/>
+                                                                        <constraint firstAttribute="height" constant="60" id="stl-Qo-nXg"/>
+                                                                    </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <real key="value" value="25"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ryan Reynolds" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ek6-4x-VDd">
+                                                                    <rect key="frame" x="0.0" y="65" width="60" height="33"/>
+                                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="12"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="98" id="ycG-tD-l5K"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qOv-d9-eH1">
+                                                            <rect key="frame" x="150" y="0.0" width="60" height="98"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ryanreynolds" translatesAutoresizingMaskIntoConstraints="NO" id="dAQ-Yh-5bl" customClass="DesignableImageView" customModule="Spring">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="60" id="1yI-9v-vaf"/>
+                                                                        <constraint firstAttribute="height" constant="60" id="r2H-MR-6Xf"/>
+                                                                    </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <real key="value" value="25"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ryan Reynolds" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7SK-de-64l">
+                                                                    <rect key="frame" x="0.0" y="65" width="60" height="33"/>
+                                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="12"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="98" id="8ID-rS-ZLH"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TFs-yj-saa">
+                                                            <rect key="frame" x="225" y="0.0" width="60" height="98"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ryanreynolds" translatesAutoresizingMaskIntoConstraints="NO" id="TPK-4h-yaG" customClass="DesignableImageView" customModule="Spring">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="60" id="TiH-5g-nq8"/>
+                                                                        <constraint firstAttribute="height" constant="60" id="YQb-a8-wun"/>
+                                                                    </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <real key="value" value="25"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ryan Reynolds" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5u-fL-gMV">
+                                                                    <rect key="frame" x="0.0" y="65" width="60" height="33"/>
+                                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="12"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="98" id="Kf5-R1-DR2"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.45000000000000001" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="wpJ-NJ-KDn" secondAttribute="trailing" constant="8" id="Q2g-lM-84v"/>
-                                                <constraint firstItem="wpJ-NJ-KDn" firstAttribute="leading" secondItem="eI4-bJ-KYR" secondAttribute="leading" constant="8" id="q1t-Z8-XQd"/>
-                                                <constraint firstItem="wpJ-NJ-KDn" firstAttribute="top" secondItem="eI4-bJ-KYR" secondAttribute="top" constant="8" id="tju-zb-diC"/>
+                                                <constraint firstItem="BEZ-NX-dwE" firstAttribute="top" secondItem="OKH-z8-j6y" secondAttribute="bottom" constant="5" id="5MO-2O-1fh"/>
+                                                <constraint firstItem="OKH-z8-j6y" firstAttribute="leading" secondItem="eI4-bJ-KYR" secondAttribute="leading" constant="8" id="99g-NO-huv"/>
+                                                <constraint firstItem="bbT-Ml-kWb" firstAttribute="top" secondItem="Joc-Gm-IPx" secondAttribute="bottom" constant="5" id="COP-Mq-eNU"/>
+                                                <constraint firstAttribute="trailing" secondItem="yBN-gy-eBo" secondAttribute="trailing" constant="8" id="EAe-cS-58Q"/>
+                                                <constraint firstItem="Joc-Gm-IPx" firstAttribute="top" secondItem="yBN-gy-eBo" secondAttribute="bottom" constant="10" id="Isn-5K-6qJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="BEZ-NX-dwE" secondAttribute="trailing" constant="8" id="Jto-Gk-h1b"/>
+                                                <constraint firstItem="BEZ-NX-dwE" firstAttribute="leading" secondItem="eI4-bJ-KYR" secondAttribute="leading" constant="8" id="K8b-YI-iFf"/>
+                                                <constraint firstItem="bbT-Ml-kWb" firstAttribute="leading" secondItem="eI4-bJ-KYR" secondAttribute="leading" constant="8" id="W4C-Vb-qqf"/>
+                                                <constraint firstItem="bbT-Ml-kWb" firstAttribute="top" secondItem="Joc-Gm-IPx" secondAttribute="bottom" constant="5" id="Z8I-sl-RxH"/>
+                                                <constraint firstItem="yBN-gy-eBo" firstAttribute="leading" secondItem="eI4-bJ-KYR" secondAttribute="leading" constant="8" id="ZUV-RS-5Sx"/>
+                                                <constraint firstItem="2mG-o9-gZ0" firstAttribute="centerX" secondItem="bbT-Ml-kWb" secondAttribute="centerX" id="eBa-gE-ae0"/>
+                                                <constraint firstItem="yBN-gy-eBo" firstAttribute="top" secondItem="BEZ-NX-dwE" secondAttribute="bottom" constant="5" id="hCM-Na-AEg"/>
+                                                <constraint firstItem="2mG-o9-gZ0" firstAttribute="top" secondItem="bbT-Ml-kWb" secondAttribute="bottom" constant="8" id="ifL-cZ-90Y"/>
+                                                <constraint firstAttribute="trailing" secondItem="bbT-Ml-kWb" secondAttribute="trailing" constant="8" id="kQV-K5-JtG"/>
+                                                <constraint firstItem="OKH-z8-j6y" firstAttribute="top" secondItem="eI4-bJ-KYR" secondAttribute="top" constant="8" id="m6D-t9-7xk"/>
+                                                <constraint firstItem="bbT-Ml-kWb" firstAttribute="top" secondItem="Joc-Gm-IPx" secondAttribute="bottom" id="yp5-bV-eUH"/>
+                                                <constraint firstItem="Joc-Gm-IPx" firstAttribute="leading" secondItem="eI4-bJ-KYR" secondAttribute="leading" constant="8" id="zDa-aZ-5y0"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="COP-Mq-eNU"/>
+                                                    <exclude reference="yp5-bV-eUH"/>
+                                                </mask>
+                                            </variation>
                                         </view>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -248,6 +425,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="moviePoster" destination="6LQ-b3-hf9" id="1CD-8t-OCk"/>
+                        <outlet property="movieSynopsis" destination="yBN-gy-eBo" id="v3E-Um-NSV"/>
                         <outlet property="navBar" destination="S7y-WC-cHs" id="qRm-XO-WV8"/>
                     </connections>
                 </viewController>
@@ -282,6 +460,7 @@
     <resources>
         <image name="icon-back" width="11" height="20"/>
         <image name="movie-poster" width="500" height="750"/>
+        <image name="ryanreynolds" width="640" height="420"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="YCt-45-iSv"/>

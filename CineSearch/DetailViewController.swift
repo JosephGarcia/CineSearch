@@ -8,13 +8,29 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var navBar: UINavigationItem!
     @IBOutlet weak var moviePoster: UIImageView!
+    @IBOutlet weak var movieSynopsis: UITextView!
+    
+    
     var movie: Movie!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        movieSynopsis.delegate = self
+        setupDetailView()
+        movie.getMovieDetails { () -> () in
+            self.updateUI()
+        }
+    }
+    
+    func updateUI(){
+        movieSynopsis.setContentOffset(CGPointZero, animated: false) //SETS TEXTVIEW TO TOP
+        movieSynopsis.text = movie.overview
+    }
+    
+    func setupDetailView(){
         let posterURL = NSURL(string:"\(TMDB_MOVIE_POSTER_BASE)\(self.movie.imageURL)")
         moviePoster.kf_setImageWithURL(posterURL!)
         navBar.title = movie.title
