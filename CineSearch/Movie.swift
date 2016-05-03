@@ -21,6 +21,7 @@ class Movie {
     private var _runtime: Int!
     private var _actors: [String]!
     private var _actorThumbnail: [String]!
+    private var _voteAverage: Double!
     
     var title: String {
         return _title
@@ -62,6 +63,10 @@ class Movie {
         return _actorThumbnail
     }
     
+    var voteAverage: Double {
+        return _voteAverage
+    }
+    
         
     init(title: String!, id: Int!, imageURL: String!){
         self._title = title
@@ -81,6 +86,10 @@ class Movie {
                 
                 if let overview = movie["overview"] as? String {
                     self._overview = overview
+                }
+                
+                if let vote_average = movie["vote_average"] as?  Double {
+                    self._voteAverage = vote_average / 2 // DIVING BY 2 SINCE API HAS 10 STAR SYSTEM. APP ONLY HAS 5 STAR.
                 }
                 
                 if let credits = movie["credits"] as? Dictionary<String,AnyObject> {

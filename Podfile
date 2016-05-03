@@ -8,6 +8,7 @@ pod 'Alamofire', '~> 3.2.1'
 pod 'SwiftDate', '~> 3.0'
 pod 'Kingfisher', '2.1.0'
 pod 'DZNEmptyDataSet', '~> 1.7'
+pod 'Cosmos', '~> 1.2'
 pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift2'
 end
 

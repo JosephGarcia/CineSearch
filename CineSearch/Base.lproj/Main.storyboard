@@ -11,8 +11,10 @@
         </mutableArray>
         <mutableArray key="NotoSans-Italic.ttf">
             <string>NotoSans-Italic</string>
+            <string>NotoSans-Italic</string>
         </mutableArray>
         <mutableArray key="NotoSans-Regular.ttf">
+            <string>NotoSans</string>
             <string>NotoSans</string>
             <string>NotoSans</string>
             <string>NotoSans</string>
@@ -148,13 +150,66 @@
                                     <constraint firstAttribute="height" constant="44" id="BUS-es-8Mh"/>
                                 </constraints>
                                 <color key="barTintColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="search"/>
                             </searchBar>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Results for &quot;deadpool&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3rV-qe-s9K">
+                                <rect key="frame" x="20" y="118" width="348" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="348" id="Q5u-hZ-fpp"/>
+                                    <constraint firstAttribute="height" constant="30" id="zc7-eC-jyg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSans-Italic" family="Noto Sans" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nZe-WT-91c">
+                                <rect key="frame" x="20" y="153" width="560" height="427"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="I4C-u4-ti4">
+                                    <size key="itemSize" width="150" height="260"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCell" id="7i5-v5-6m2" customClass="MovieCell" customModule="CineSearch" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="260"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="260"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uhp-cK-Cfi">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="212"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Captain America: Civil War" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dH3-Nx-tpZ">
+                                                    <rect key="frame" x="0.0" y="212" width="150" height="48"/>
+                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.86666666670000003" green="0.29411764709999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="moviePoster" destination="uhp-cK-Cfi" id="evL-Eg-Hwu"/>
+                                            <outlet property="movieTitle" destination="dH3-Nx-tpZ" id="HbM-Rn-bY4"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.61960784310000006" green="0.61960784310000006" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="nZe-WT-91c" secondAttribute="trailing" constant="20" id="Gya-Z6-BBd"/>
+                            <constraint firstItem="3rV-qe-s9K" firstAttribute="leading" secondItem="xNU-YW-IoE" secondAttribute="leadingMargin" id="KbH-x5-aq6"/>
+                            <constraint firstItem="3rV-qe-s9K" firstAttribute="top" secondItem="Ia8-sv-3zJ" secondAttribute="bottom" constant="10" id="d3s-IY-Ngd"/>
+                            <constraint firstItem="nZe-WT-91c" firstAttribute="leading" secondItem="xNU-YW-IoE" secondAttribute="leading" constant="20" id="dPi-Mm-sP9"/>
+                            <constraint firstItem="nZe-WT-91c" firstAttribute="top" secondItem="3rV-qe-s9K" secondAttribute="bottom" constant="5" id="ew1-S8-M6c"/>
                             <constraint firstItem="Ia8-sv-3zJ" firstAttribute="top" secondItem="TcY-b6-hlh" secondAttribute="bottom" id="ib7-ad-gA6"/>
                             <constraint firstAttribute="trailing" secondItem="Ia8-sv-3zJ" secondAttribute="trailing" id="ozR-1e-4gO"/>
+                            <constraint firstItem="YfR-1v-2mw" firstAttribute="top" secondItem="nZe-WT-91c" secondAttribute="bottom" constant="20" id="p0F-0E-Ti6"/>
                             <constraint firstItem="Ia8-sv-3zJ" firstAttribute="leading" secondItem="xNU-YW-IoE" secondAttribute="leading" id="za1-N3-Aaz"/>
                         </constraints>
                     </view>
@@ -167,6 +222,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="collectionView" destination="nZe-WT-91c" id="UJ5-Se-Seb"/>
+                        <outlet property="resultsText" destination="3rV-qe-s9K" id="z0R-UW-ifT"/>
+                        <outlet property="searchBar" destination="Ia8-sv-3zJ" id="YtR-KA-eXI"/>
                         <segue destination="yQm-eV-vMi" kind="show" identifier="searchToDetail" id="yU1-kF-aPs"/>
                     </connections>
                 </viewController>
@@ -226,7 +284,7 @@
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yBN-gy-eBo">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yBN-gy-eBo">
                                                     <rect key="frame" x="8" y="49" width="584" height="95"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -260,7 +318,7 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FLe-wc-r6f">
                                                             <rect key="frame" x="0.0" y="0.0" width="60" height="98"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ryanreynolds" translatesAutoresizingMaskIntoConstraints="NO" id="Au0-x8-gBG" customClass="DesignableImageView" customModule="Spring">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ryanreynolds" translatesAutoresizingMaskIntoConstraints="NO" id="Au0-x8-gBG" customClass="DesignableImageView" customModule="Spring">
                                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="60" id="CfA-3X-P9F"/>
@@ -272,7 +330,7 @@
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ryan Reynolds" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQ3-gg-tav">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ryan Reynolds" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQ3-gg-tav">
                                                                     <rect key="frame" x="0.0" y="65" width="60" height="33"/>
                                                                     <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="11"/>
                                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -363,6 +421,31 @@
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JBI-bK-Byc" customClass="CosmosView" customModule="Cosmos">
+                                                    <rect key="frame" x="420" y="8" width="172" height="30"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="172" id="O0M-fk-wgZ"/>
+                                                        <constraint firstAttribute="height" constant="30" id="sVg-ef-G1n"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                            <real key="value" value="32"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="starMargin">
+                                                            <real key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
+                                                            <integer key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                                            <real key="value" value="2.7999999999999998"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.45000000000000001" colorSpace="calibratedWhite"/>
                                             <constraints>
@@ -374,6 +457,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="BEZ-NX-dwE" secondAttribute="trailing" constant="8" id="Jto-Gk-h1b"/>
                                                 <constraint firstItem="BEZ-NX-dwE" firstAttribute="leading" secondItem="eI4-bJ-KYR" secondAttribute="leading" constant="8" id="K8b-YI-iFf"/>
                                                 <constraint firstItem="bbT-Ml-kWb" firstAttribute="leading" secondItem="eI4-bJ-KYR" secondAttribute="leading" constant="8" id="W4C-Vb-qqf"/>
+                                                <constraint firstAttribute="trailing" secondItem="JBI-bK-Byc" secondAttribute="trailing" constant="8" id="Xvf-5f-P9K"/>
                                                 <constraint firstItem="bbT-Ml-kWb" firstAttribute="top" secondItem="Joc-Gm-IPx" secondAttribute="bottom" constant="5" id="Z8I-sl-RxH"/>
                                                 <constraint firstItem="yBN-gy-eBo" firstAttribute="leading" secondItem="eI4-bJ-KYR" secondAttribute="leading" constant="8" id="ZUV-RS-5Sx"/>
                                                 <constraint firstItem="2mG-o9-gZ0" firstAttribute="centerX" secondItem="bbT-Ml-kWb" secondAttribute="centerX" id="eBa-gE-ae0"/>
@@ -382,6 +466,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="bbT-Ml-kWb" secondAttribute="trailing" constant="8" id="kQV-K5-JtG"/>
                                                 <constraint firstItem="OKH-z8-j6y" firstAttribute="top" secondItem="eI4-bJ-KYR" secondAttribute="top" constant="8" id="m6D-t9-7xk"/>
                                                 <constraint firstItem="bbT-Ml-kWb" firstAttribute="top" secondItem="Joc-Gm-IPx" secondAttribute="bottom" id="yp5-bV-eUH"/>
+                                                <constraint firstItem="JBI-bK-Byc" firstAttribute="top" secondItem="eI4-bJ-KYR" secondAttribute="top" constant="8" id="yxU-LF-zno"/>
                                                 <constraint firstItem="Joc-Gm-IPx" firstAttribute="leading" secondItem="eI4-bJ-KYR" secondAttribute="leading" constant="8" id="zDa-aZ-5y0"/>
                                             </constraints>
                                             <variation key="default">
@@ -433,8 +518,10 @@
                         <outlet property="actorTwo" destination="ek6-4x-VDd" id="BRm-sZ-sS6"/>
                         <outlet property="actorTwoThumbnail" destination="5KN-bw-Cnp" id="Ojg-MT-xu7"/>
                         <outlet property="moviePoster" destination="6LQ-b3-hf9" id="1CD-8t-OCk"/>
+                        <outlet property="movieStars" destination="JBI-bK-Byc" id="ymm-o4-8LI"/>
                         <outlet property="movieSynopsis" destination="yBN-gy-eBo" id="v3E-Um-NSV"/>
                         <outlet property="navBar" destination="S7y-WC-cHs" id="qRm-XO-WV8"/>
+                        <outlet property="visualEffectView" destination="bUq-at-emy" id="Qox-ty-Tkb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cJm-Pu-AGe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -471,6 +558,6 @@
         <image name="ryanreynolds" width="640" height="420"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YCt-45-iSv"/>
+        <segue reference="yU1-kF-aPs"/>
     </inferredMetricsTieBreakers>
 </document>

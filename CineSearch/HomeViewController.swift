@@ -31,7 +31,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         }
     }
     
-    // VIEWCONTROLLER FUNCTIONS
+    // VC FUNCTIONS
     func displayMovies() {
         let helper = APIHelper()
         

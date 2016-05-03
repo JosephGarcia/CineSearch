@@ -8,9 +8,11 @@
 
 import UIKit
 import Spring
+import Cosmos
 
 class DetailViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var navBar: UINavigationItem!
+    @IBOutlet weak var visualEffectView: UIVisualEffectView!
     @IBOutlet weak var moviePoster: UIImageView!
     @IBOutlet weak var movieSynopsis: UITextView!
     @IBOutlet weak var actorOne: UILabel!
@@ -21,6 +23,7 @@ class DetailViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var actorTwoThumbnail: DesignableImageView!
     @IBOutlet weak var actorThreeThumbnail: DesignableImageView!
     @IBOutlet weak var actorFourThumbnail: DesignableImageView!
+    @IBOutlet weak var movieStars: CosmosView!
     
     
     var movie: Movie!
@@ -52,6 +55,8 @@ class DetailViewController: UIViewController, UITextViewDelegate {
         actorTwoThumbnail.kf_setImageWithURL(NSURL(string: movie.actorThumbnail[1])!)
         actorThreeThumbnail.kf_setImageWithURL(NSURL(string: movie.actorThumbnail[2])!)
         actorFourThumbnail.kf_setImageWithURL(NSURL(string: movie.actorThumbnail[3])!)
+        
+        movieStars.rating = movie.voteAverage
     }
     
     func setupDetailView(){

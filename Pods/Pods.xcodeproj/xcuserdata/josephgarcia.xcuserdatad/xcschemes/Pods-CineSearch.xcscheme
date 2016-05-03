@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'C88FF5DF58EAE0E24FE39D45'
+               BlueprintIdentifier = '56E1EBCDE80204582A711EDB'
                BlueprintName = 'Pods-CineSearch'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_CineSearch.framework'>

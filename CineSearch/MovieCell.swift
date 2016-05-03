@@ -14,6 +14,7 @@ class MovieCell: UICollectionViewCell{
     
     @IBOutlet weak var moviePoster: UIImageView!
     @IBOutlet weak var movieTitle: UILabel!
+    
     var movie: Movie!
     
     required init?(coder aDecoder: NSCoder) {

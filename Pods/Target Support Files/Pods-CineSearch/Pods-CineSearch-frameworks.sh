@@ -85,6 +85,7 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-CineSearch/Alamofire.framework"
+  install_framework "Pods-CineSearch/Cosmos.framework"
   install_framework "Pods-CineSearch/DZNEmptyDataSet.framework"
   install_framework "Pods-CineSearch/Kingfisher.framework"
   install_framework "Pods-CineSearch/Spring.framework"
@@ -92,6 +93,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-CineSearch/Alamofire.framework"
+  install_framework "Pods-CineSearch/Cosmos.framework"
   install_framework "Pods-CineSearch/DZNEmptyDataSet.framework"
   install_framework "Pods-CineSearch/Kingfisher.framework"
   install_framework "Pods-CineSearch/Spring.framework"
