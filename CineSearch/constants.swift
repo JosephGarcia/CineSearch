@@ -18,7 +18,7 @@ import UIKit
 //URLS
 let TMDB_API_KEY = "?api_key=34a46b49db5c44899a8ffe4bf365854b"
 let TMDB_BASE_URL = "https://api.themoviedb.org/3/movie"
-let TMDB_APPEND_RESPONSE = "&append_to_response=credits,images"
+let TMDB_APPEND_RESPONSE = "&append_to_response=credits"
 let TMDB_POPULAR_MOVIES_URL = "https://api.themoviedb.org/3/movie/popular?api_key=34a46b49db5c44899a8ffe4bf365854b"
 let TMDB_SEARCH_MOVIES_URL = "https://api.themoviedb.org/3/search/movie?api_key=34a46b49db5c44899a8ffe4bf365854b&query="
 let TMDB_IMAGE_BASE = "http://image.tmdb.org/t/p/w500"

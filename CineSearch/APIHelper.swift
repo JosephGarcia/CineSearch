@@ -49,7 +49,9 @@ class APIHelper {
         var title = String()
         var id = Int()
         var imageURL = String()
-        let searchURL = "\(TMDB_SEARCH_MOVIES_URL)\(query)"
+        let encodedQuery = query.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
+        let searchURL = "\(TMDB_SEARCH_MOVIES_URL)\(encodedQuery)"
+        print(encodedQuery)
         
         Alamofire.request(.GET, searchURL).responseJSON { (response) -> Void in
             let result = response.result

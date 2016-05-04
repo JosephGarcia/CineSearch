@@ -65,8 +65,12 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
     
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
         let currentCell = collectionView.cellForItemAtIndexPath(indexPath) as! MovieCell
         currentCell.cellAnimate()
+        
+        searchBar.resignFirstResponder()
+        
         let movie: Movie
         movie = searchResults[indexPath.row]
         performSegueWithIdentifier(SEARCH_TO_DETAIL, sender: movie)
