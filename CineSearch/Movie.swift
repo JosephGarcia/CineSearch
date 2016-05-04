@@ -17,10 +17,12 @@ class Movie {
     private var _imageURL: String!
     private var _actors: [Actor]!
     private var _releaseDate: String!
-    private var _tagline: String!
     private var _movieURL: String!
     private var _runtime: Int!
     private var _voteAverage: Double!
+    private var _budget: Int!
+    private var _revenue: Int!
+    private var _status: String!
     
     var title: String {
         return _title
@@ -48,13 +50,6 @@ class Movie {
         return _releaseDate
     }
     
-    var tagline: String {
-        if _tagline == nil {
-            _tagline = "N/A"
-        }
-        return _tagline
-    }
-    
     var runtime: Int {
         if _runtime == nil {
             _runtime = 0
@@ -72,6 +67,18 @@ class Movie {
     
     var actors: [Actor] {
         return _actors
+    }
+    
+    var budget: Int {
+        return _budget
+    }
+    
+    var revenue: Int {
+        return _revenue
+    }
+    
+    var status: String {
+        return _status
     }
     
         
@@ -97,7 +104,28 @@ class Movie {
                 }
                 
                 if let vote_average = movie["vote_average"] as?  Double {
-                    self._voteAverage = vote_average / 2 // DIVING BY 2 SINCE API HAS 10 STAR SYSTEM. APP ONLY HAS 5 STAR.
+                    // DIVING BY 2 SINCE API HAS 10 STAR SYSTEM. APP ONLY HAS 5 STAR.
+                    self._voteAverage = vote_average / 2
+                }
+                
+                if let status = movie["status"] as? String {
+                    self._status = status
+                }
+                
+                if let revenue = movie["revenue"] as? Int {
+                    self._revenue = revenue
+                }
+                
+                if let budget = movie["budget"] as? Int {
+                    self._budget = budget
+                }
+                
+                if let runtime = movie["runtime"] as? Int {
+                    self._runtime = runtime
+                }
+                
+                if let releaseDate = movie["release_date"] as? String {
+                    self._releaseDate = releaseDate
                 }
                 
                 if let credits = movie["credits"] as? Dictionary<String,AnyObject> {

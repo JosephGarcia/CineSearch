@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BRk-7G-fx3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BRk-7G-fx3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -14,6 +14,19 @@
             <string>NotoSans-Italic</string>
         </mutableArray>
         <mutableArray key="NotoSans-Regular.ttf">
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
+            <string>NotoSans</string>
             <string>NotoSans</string>
             <string>NotoSans</string>
             <string>NotoSans</string>
@@ -245,7 +258,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="oyd-lV-BG3">
-                        <barButtonItem key="leftBarButtonItem" title="Back to Home" id="Y3k-dm-63w">
+                        <barButtonItem key="leftBarButtonItem" image="icon-back" id="Y3k-dm-63w">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="KEy-9o-xmd" kind="unwind" unwindAction="unwindToViewController:" id="TkP-o0-9kr"/>
@@ -323,7 +336,7 @@
                                                     </constraints>
                                                     <string key="text">Based upon Marvel Comics’ most unconventional anti-hero, DEADPOOL tells the origin story of former Special Forces operative turned mercenary Wade Wilson, who after being subjected to a rogue experiment that leaves him with accelerated healing powers, adopts the alter ego Deadpool. Armed with his new abilities and a dark, twisted sense of humor, Deadpool hunts down the man who nearly destroyed his life.</string>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <fontDescription key="fontDescription" name="NotoSans-Italic" family="Noto Sans" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="NotoSans-Italic" family="Noto Sans" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Joc-Gm-IPx">
@@ -421,6 +434,132 @@
                                                         </mask>
                                                     </variation>
                                                 </collectionView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Olv-aZ-lMf">
+                                                    <rect key="frame" x="8" y="365" width="584" height="1"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="HBM-H0-cMV"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6S6-et-jz2">
+                                                    <rect key="frame" x="8" y="330" width="91" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="91" id="04r-ev-jti"/>
+                                                        <constraint firstAttribute="height" constant="30" id="Wms-pe-wVI"/>
+                                                        <constraint firstAttribute="width" constant="91" id="hoM-ev-zem"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="qmc-MI-qg2"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="22"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ELB-6I-oee" userLabel="Details">
+                                                    <rect key="frame" x="8" y="371" width="584" height="157"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="tDy-vj-3G8">
+                                                            <rect key="frame" x="202" y="0.0" width="181" height="22"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAh-g9-TTL">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="96" height="22"/>
+                                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="15"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/30/2015" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvN-Dy-Jwt">
+                                                                    <rect key="frame" x="101" y="0.0" width="80" height="22"/>
+                                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="15"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Hv6-aZ-iQh">
+                                                            <rect key="frame" x="227" y="27" width="130" height="22"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Budget:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiQ-QN-urM">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="56" height="22"/>
+                                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="15"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10000000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m37-ih-hdw">
+                                                                    <rect key="frame" x="61" y="0.0" width="69" height="22"/>
+                                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="15"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NRs-rW-OIY">
+                                                            <rect key="frame" x="230" y="54" width="125" height="22"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Revenue:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nex-3w-9ay">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="65" height="22"/>
+                                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="15"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="250000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbo-xJ-Axw">
+                                                                    <rect key="frame" x="70" y="0.0" width="55" height="22"/>
+                                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="16"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xGW-Ns-tUH">
+                                                            <rect key="frame" x="235" y="81" width="115" height="22"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdV-UL-lun">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="48" height="22"/>
+                                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="15"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Planned" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7r-NM-YU9">
+                                                                    <rect key="frame" x="53" y="0.0" width="62" height="22"/>
+                                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="16"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yZJ-rD-lcQ">
+                                                            <rect key="frame" x="223" y="108" width="138" height="22"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Runtime:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8v-7y-2DR">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="64" height="22"/>
+                                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="15"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="270 mins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayQ-aT-Eir">
+                                                                    <rect key="frame" x="69" y="0.0" width="69" height="22"/>
+                                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="16"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ejt-2a-Vvd">
+                                                            <rect key="frame" x="129" y="135" width="326" height="22"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genres:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8M-gt-ObK">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="55" height="22"/>
+                                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="15"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drama / Romance / Comedy / Fantasy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOn-4D-TRf">
+                                                                    <rect key="frame" x="60" y="0.0" width="266" height="22"/>
+                                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="15"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.45000000000000001" colorSpace="calibratedWhite"/>
                                             <constraints>
@@ -431,20 +570,29 @@
                                                 <constraint firstItem="un8-1p-iOf" firstAttribute="leading" secondItem="eI4-bJ-KYR" secondAttribute="leadingMargin" id="AYc-u4-xfz"/>
                                                 <constraint firstItem="bbT-Ml-kWb" firstAttribute="top" secondItem="Joc-Gm-IPx" secondAttribute="bottom" constant="5" id="COP-Mq-eNU"/>
                                                 <constraint firstAttribute="trailing" secondItem="yBN-gy-eBo" secondAttribute="trailing" constant="8" id="EAe-cS-58Q"/>
+                                                <constraint firstItem="ELB-6I-oee" firstAttribute="top" secondItem="Olv-aZ-lMf" secondAttribute="bottom" constant="5" id="GGP-Fs-uBq"/>
                                                 <constraint firstItem="Joc-Gm-IPx" firstAttribute="top" secondItem="yBN-gy-eBo" secondAttribute="bottom" constant="10" id="Isn-5K-6qJ"/>
                                                 <constraint firstAttribute="trailing" secondItem="BEZ-NX-dwE" secondAttribute="trailing" constant="8" id="Jto-Gk-h1b"/>
                                                 <constraint firstItem="BEZ-NX-dwE" firstAttribute="leading" secondItem="eI4-bJ-KYR" secondAttribute="leading" constant="8" id="K8b-YI-iFf"/>
+                                                <constraint firstItem="6S6-et-jz2" firstAttribute="leading" secondItem="eI4-bJ-KYR" secondAttribute="leading" constant="8" id="Nl1-Eq-I6r"/>
                                                 <constraint firstItem="un8-1p-iOf" firstAttribute="top" secondItem="bbT-Ml-kWb" secondAttribute="bottom" constant="5" id="RW0-BD-Osi"/>
                                                 <constraint firstItem="bbT-Ml-kWb" firstAttribute="leading" secondItem="eI4-bJ-KYR" secondAttribute="leading" constant="8" id="W4C-Vb-qqf"/>
                                                 <constraint firstAttribute="trailing" secondItem="JBI-bK-Byc" secondAttribute="trailing" constant="8" id="Xvf-5f-P9K"/>
                                                 <constraint firstItem="bbT-Ml-kWb" firstAttribute="top" secondItem="Joc-Gm-IPx" secondAttribute="bottom" constant="5" id="Z8I-sl-RxH"/>
                                                 <constraint firstItem="yBN-gy-eBo" firstAttribute="leading" secondItem="eI4-bJ-KYR" secondAttribute="leading" constant="8" id="ZUV-RS-5Sx"/>
+                                                <constraint firstItem="6S6-et-jz2" firstAttribute="top" secondItem="un8-1p-iOf" secondAttribute="bottom" constant="10" id="efC-az-9Ry"/>
+                                                <constraint firstItem="Olv-aZ-lMf" firstAttribute="top" secondItem="6S6-et-jz2" secondAttribute="bottom" constant="5" id="f3g-ei-cRf"/>
+                                                <constraint firstAttribute="trailing" secondItem="Olv-aZ-lMf" secondAttribute="trailing" constant="8" id="gQh-40-JWf"/>
                                                 <constraint firstItem="yBN-gy-eBo" firstAttribute="top" secondItem="BEZ-NX-dwE" secondAttribute="bottom" constant="5" id="hCM-Na-AEg"/>
                                                 <constraint firstAttribute="trailing" secondItem="bbT-Ml-kWb" secondAttribute="trailing" constant="8" id="kQV-K5-JtG"/>
                                                 <constraint firstItem="OKH-z8-j6y" firstAttribute="top" secondItem="eI4-bJ-KYR" secondAttribute="top" constant="8" id="m6D-t9-7xk"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ELB-6I-oee" secondAttribute="trailing" id="mdf-op-WwX"/>
+                                                <constraint firstItem="Olv-aZ-lMf" firstAttribute="leading" secondItem="eI4-bJ-KYR" secondAttribute="leading" constant="8" id="q52-NG-Yw3"/>
                                                 <constraint firstItem="bbT-Ml-kWb" firstAttribute="top" secondItem="Joc-Gm-IPx" secondAttribute="bottom" id="yp5-bV-eUH"/>
                                                 <constraint firstItem="JBI-bK-Byc" firstAttribute="top" secondItem="eI4-bJ-KYR" secondAttribute="top" constant="8" id="yxU-LF-zno"/>
+                                                <constraint firstItem="ELB-6I-oee" firstAttribute="leading" secondItem="eI4-bJ-KYR" secondAttribute="leadingMargin" id="z6p-b2-tRe"/>
                                                 <constraint firstItem="Joc-Gm-IPx" firstAttribute="leading" secondItem="eI4-bJ-KYR" secondAttribute="leading" constant="8" id="zDa-aZ-5y0"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ELB-6I-oee" secondAttribute="bottom" id="zLZ-fZ-hpA"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
@@ -487,10 +635,16 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="un8-1p-iOf" id="I3b-hx-oCb"/>
+                        <outlet property="movieBudget" destination="m37-ih-hdw" id="xHC-Xb-rdc"/>
+                        <outlet property="movieGenres" destination="IOn-4D-TRf" id="Y96-hT-Hts"/>
                         <outlet property="moviePoster" destination="6LQ-b3-hf9" id="1CD-8t-OCk"/>
+                        <outlet property="movieRevenue" destination="mbo-xJ-Axw" id="g5d-BF-qVT"/>
+                        <outlet property="movieRuntime" destination="ayQ-aT-Eir" id="ibV-BO-GSx"/>
                         <outlet property="movieStars" destination="JBI-bK-Byc" id="ymm-o4-8LI"/>
+                        <outlet property="movieStatus" destination="L7r-NM-YU9" id="V7G-7t-X4h"/>
                         <outlet property="movieSynopsis" destination="yBN-gy-eBo" id="v3E-Um-NSV"/>
                         <outlet property="navBar" destination="S7y-WC-cHs" id="qRm-XO-WV8"/>
+                        <outlet property="releaseDate" destination="cvN-Dy-Jwt" id="9PH-nK-HXv"/>
                         <outlet property="visualEffectView" destination="bUq-at-emy" id="Qox-ty-Tkb"/>
                     </connections>
                 </viewController>

@@ -17,6 +17,12 @@ class DetailViewController: UIViewController, UITextViewDelegate, UICollectionVi
     @IBOutlet weak var moviePoster: UIImageView!
     @IBOutlet weak var movieSynopsis: UITextView!
     @IBOutlet weak var movieStars: CosmosView!
+    @IBOutlet weak var releaseDate: UILabel!
+    @IBOutlet weak var movieBudget: UILabel!
+    @IBOutlet weak var movieRevenue: UILabel!
+    @IBOutlet weak var movieStatus: UILabel!
+    @IBOutlet weak var movieRuntime: UILabel!
+    @IBOutlet weak var movieGenres: UILabel!
     
     var movie: Movie!
     var actors = [Actor]()
@@ -40,6 +46,12 @@ class DetailViewController: UIViewController, UITextViewDelegate, UICollectionVi
         movieSynopsis.setContentOffset(CGPointZero, animated: false) //SETS TEXTVIEW TO TOP
         movieSynopsis.text = movie.overview
         movieStars.rating = movie.voteAverage
+        releaseDate.text = movie.releaseDate
+        movieBudget.text = "\(movie.budget)"
+        movieRevenue.text = "\(movie.revenue)"
+        movieStatus.text = movie.status
+        movieRuntime.text = "\(movie.runtime) mins."
+        movieGenres.text = "Fantasy / Romance"
     }
     
     func setupDetailView(){
