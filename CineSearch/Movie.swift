@@ -23,6 +23,7 @@ class Movie {
     private var _budget: Int!
     private var _revenue: Int!
     private var _status: String!
+    private var _genres: String!
     
     var title: String {
         return _title
@@ -81,6 +82,10 @@ class Movie {
         return _status
     }
     
+    var genres: String {
+        return _genres
+    }
+    
         
     init(title: String!, id: Int!, imageURL: String!){
         self._title = title
@@ -126,6 +131,18 @@ class Movie {
                 
                 if let releaseDate = movie["release_date"] as? String {
                     self._releaseDate = releaseDate
+                }
+                
+                if let genres = movie["genres"] as? [Dictionary<String,AnyObject>] {
+                    var genreList = ""
+                    for genre in genres {
+                        
+                        if let type = genre["name"] as? String {
+                            genreList += "\(type) "
+                        }
+                    }
+                    self._genres = genreList
+                    print(genreList)
                 }
                 
                 if let credits = movie["credits"] as? Dictionary<String,AnyObject> {

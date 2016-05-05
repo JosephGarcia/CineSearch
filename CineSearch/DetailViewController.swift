@@ -26,6 +26,7 @@ class DetailViewController: UIViewController, UITextViewDelegate, UICollectionVi
     
     var movie: Movie!
     var actors = [Actor]()
+    var formatter = NSNumberFormatter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,18 +47,21 @@ class DetailViewController: UIViewController, UITextViewDelegate, UICollectionVi
         movieSynopsis.setContentOffset(CGPointZero, animated: false) //SETS TEXTVIEW TO TOP
         movieSynopsis.text = movie.overview
         movieStars.rating = movie.voteAverage
-        releaseDate.text = movie.releaseDate
-        movieBudget.text = "\(movie.budget)"
-        movieRevenue.text = "\(movie.revenue)"
+        movieBudget.text = formatter.stringFromNumber(movie.budget)
+        movieRevenue.text = formatter.stringFromNumber(movie.revenue)
         movieStatus.text = movie.status
         movieRuntime.text = "\(movie.runtime) mins."
-        movieGenres.text = "Fantasy / Romance"
+        movieGenres.text = movie.genres
+        releaseDate.text = movie.releaseDate
     }
     
     func setupDetailView(){
         let posterURL = NSURL(string:"\(TMDB_IMAGE_BASE)\(self.movie.imageURL)")
         moviePoster.kf_setImageWithURL(posterURL!)
         navBar.title = movie.title
+        // FORMAT CURRENCY
+        formatter.numberStyle = .CurrencyStyle
+        formatter.maximumFractionDigits = 0;
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
