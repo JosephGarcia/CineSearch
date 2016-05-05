@@ -138,7 +138,7 @@ class Movie {
                     for genre in genres {
                         
                         if let type = genre["name"] as? String {
-                            genreList += "\(type) "
+                            genreList += "\(type) - "
                         }
                     }
                     self._genres = genreList

@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import DZNEmptyDataSet
 
-class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, DZNEmptyDataSetDelegate, DZNEmptyDataSetSource {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -16,12 +17,15 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
     
     let helper = APIHelper()
     var searchResults = [Movie]()
+    var searchingForMovies = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
         searchBar.delegate = self
+        self.collectionView.emptyDataSetDelegate = self
+        self.collectionView.emptyDataSetSource = self
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -41,6 +45,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
     //VC FUNCTIONS
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchingForMovies = true
         let query = searchBar.text!
         resultsText.hidden = false
         resultsText.text = "Results for '\(query)'"
@@ -96,6 +101,18 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
             return UICollectionViewCell()
         }
         
+    }
+    // EMPTY DATA SET 
+    
+    func descriptionForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+        let stringColor = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        var emptyDesc = NSAttributedString(string: "Search your favorite movies!", attributes: stringColor )
+        
+        if searchingForMovies && searchResults.count == 0 {
+            emptyDesc = NSAttributedString(string: "Sorry, we couldn't find any movies relating to \"\(searchBar.text!)\"", attributes: stringColor )
+        }
+        
+        return emptyDesc
     }
 
     

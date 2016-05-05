@@ -9,8 +9,9 @@
 import UIKit
 import Spring
 import Cosmos
+import DZNEmptyDataSet
 
-class DetailViewController: UIViewController, UITextViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class DetailViewController: UIViewController, UITextViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, DZNEmptyDataSetDelegate, DZNEmptyDataSetSource {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var navBar: UINavigationItem!
     @IBOutlet weak var visualEffectView: UIVisualEffectView!
@@ -38,6 +39,8 @@ class DetailViewController: UIViewController, UITextViewDelegate, UICollectionVi
             self.actors = self.movie.actors
             self.collectionView.reloadData()
         }
+        self.collectionView.emptyDataSetDelegate = self
+        self.collectionView.emptyDataSetSource = self
         collectionView.dataSource = self
         collectionView.delegate = self
         movieSynopsis.delegate = self
@@ -88,6 +91,15 @@ class DetailViewController: UIViewController, UITextViewDelegate, UICollectionVi
         } else {
             return UICollectionViewCell()
         }
+    }
+    
+    // EMPTY DATA SET
+    
+    func descriptionForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+        let stringColor = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        let emptyDesc = NSAttributedString(string: "No actors were found for this movie.", attributes: stringColor )
+        
+        return emptyDesc
     }
 
 }
