@@ -142,7 +142,6 @@ class Movie {
                         }
                     }
                     self._genres = genreList
-                    print(genreList)
                 }
                 
                 if let credits = movie["credits"] as? Dictionary<String,AnyObject> {

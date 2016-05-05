@@ -38,6 +38,8 @@ class MovieCell: UICollectionViewCell{
     }
     
     func cellAnimate(){
+        moviePoster.animation = "zoomIn"
+        moviePoster.force = 0.5
         moviePoster.animate()
     }
 

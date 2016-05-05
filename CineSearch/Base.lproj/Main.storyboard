@@ -88,6 +88,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="260"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Captain America: Civil War" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZcV-89-LYZ">
+                                                    <rect key="frame" x="0.0" y="212" width="150" height="48"/>
+                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="movie-poster" translatesAutoresizingMaskIntoConstraints="NO" id="x6d-EE-z9d" customClass="DesignableImageView" customModule="Spring">
                                                     <rect key="frame" x="0.0" y="0.0" width="150" height="212"/>
                                                     <userDefinedRuntimeAttributes>
@@ -98,22 +104,12 @@
                                                             <color key="value" red="0.0" green="0.0" blue="0.078947368419999997" alpha="1" colorSpace="calibratedRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="NO"/>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="force">
-                                                            <real key="value" value="0.5"/>
-                                                        </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="delay">
                                                             <real key="value" value="0.0"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="NO"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Captain America: Civil War" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZcV-89-LYZ">
-                                                    <rect key="frame" x="0.0" y="212" width="150" height="48"/>
-                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="16"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -217,13 +213,6 @@
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="NO"/>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="NO"/>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="force">
-                                                            <real key="value" value="0.5"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                                                            <real key="value" value="0.0"/>
-                                                        </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Captain America: Civil War" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dH3-Nx-tpZ">

@@ -26,6 +26,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
         searchBar.delegate = self
         self.collectionView.emptyDataSetDelegate = self
         self.collectionView.emptyDataSetSource = self
+        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -39,6 +40,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        
         searchBar.resignFirstResponder()
     }
     
@@ -56,6 +58,19 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UICollectionV
         }
         
         searchBar.resignFirstResponder()
+    }
+    
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        collectionView.addGestureRecognizer(tap)
+    }
+    
+    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+        collectionView.gestureRecognizers?.removeLast()
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
 
     // COLLECTION VIEW CONTROLS
