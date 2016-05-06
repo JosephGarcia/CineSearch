@@ -31,6 +31,38 @@ class CineSearchUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        
+        let app = XCUIApplication()
+        let collectionViewsQuery = app.collectionViews
+        let cellsQuery = collectionViewsQuery.cells
+        cellsQuery.otherElements.containingType(.StaticText, identifier:"Star Wars: The Force Awakens").childrenMatchingType(.Image).element.tap()
+        app.navigationBars["Star Wars: The Force Awakens"].buttons["icon back"].tap()
+        cellsQuery.otherElements.containingType(.StaticText, identifier:"Batman v Superman: Dawn of Justice").childrenMatchingType(.Image).element.tap()
+        app.navigationBars["Batman v Superman: Dawn of Justice"].buttons["icon back"].tap()
+        
+        let collectionView = app.otherElements.containingType(.NavigationBar, identifier:"Home").childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.CollectionView).element
+        collectionView.swipeUp()
+        collectionView.swipeUp()
+        cellsQuery.otherElements.containingType(.StaticText, identifier:"Dirty Grandpa").childrenMatchingType(.Image).element.tap()
+        app.navigationBars["Dirty Grandpa"].buttons["icon back"].tap()
+        app.navigationBars["Home"].buttons["Search"].tap()
+        
+        let searchMoviesSearchField = app.searchFields["Search Movies"]
+        searchMoviesSearchField.tap()
+        searchMoviesSearchField.typeText("Dead")
+        
+        let searchButton = app.buttons["Search"]
+        searchButton.tap()
+        let collectionView2 = app.otherElements.containingType(.NavigationBar, identifier:"Search").childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.CollectionView).element
+        collectionView2.swipeUp()
+        cellsQuery.otherElements.containingType(.StaticText, identifier:"Dead Silence").childrenMatchingType(.Image).element.tap()
+        app.navigationBars["Dead Silence"].buttons["icon back"].tap()
+        collectionView2.tap()
+        searchMoviesSearchField.buttons["Clear text"].tap()
+        searchMoviesSearchField.typeText("Gghdd")
+        searchButton.tap()
+        
     }
     
 }
